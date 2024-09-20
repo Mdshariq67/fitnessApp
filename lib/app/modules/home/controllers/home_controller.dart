@@ -22,7 +22,7 @@ class HomeController extends GetxController {
 
   void navigateToHome() async {
     log("Navigating to home...");
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 10));
     log("Navigating to home now!");
     Get.offNamed(Routes.SPLASH);
   }

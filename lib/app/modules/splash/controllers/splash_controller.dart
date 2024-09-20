@@ -1,20 +1,12 @@
-import 'package:fitnesshealth/app/routes/app_pages.dart';
 import 'package:get/get.dart';
 
-import 'dart:developer'; // Import logging
-
 class SplashController extends GetxController {
-  @override
-  void onInit() {
-    super.onInit();
-    log("SplashController initialized");
-    navigateToHome();
-  }
+  var isDone = false.obs;
+  var logo = 'assets/logo.png'.obs;
+  var pin = 'assets/pin.png'.obs;
+  var logoText = 'Fitness'.obs;
 
-  void navigateToHome() async {
-    log("Navigating to home...");
-    await Future.delayed(const Duration(seconds: 3));
-    log("Navigating to home now!");
-    Get.offNamed(Routes.HOME);
+  void updateIsDone() {
+    isDone.value = true;
   }
 }
